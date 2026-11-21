@@ -1,7 +1,6 @@
 {
   config,
   lib,
-  pkgs,
   ...
 }: {
   config = {
@@ -33,10 +32,13 @@
       LC_TIME = config.i18n.defaultLocale;
     };
 
+    # WARNING: You will have to remove the github PAT before you build
+    # I left it in place to show you how to add it again for using tack
+    # And circus if you so choose to go down the CI route
     # Ensure nix flakes are enabled
     nix.extraOptions = ''
       experimental-features = nix-command flakes
-      !include ${config.security.nix-secrets.secrets."mayonster/github_token".path}
+      !include ${config.security.nix-secrets.secrets."alfk99/github_token".path}
     '';
 
     # Wheel group gets trusted access to nix daemon

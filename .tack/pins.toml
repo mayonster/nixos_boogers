@@ -51,12 +51,10 @@ hjem = "hjem"
 #   tags_from       fixed-only repo url or http(s) page to read tag's tags from, for an
 #                   asset that isn't a release download
 [inputs]
+#WARNING: You might want to change this to ur stable branch
+# If you're a damn coward ;)
 [inputs.nixpkgs]
 url = "channel:nixos-unstable"
-group = "nix"
-
-[inputs.nixos-hardware]
-url = "github:NixOS/nixos-hardware/master"
 group = "nix"
 
 
@@ -73,48 +71,15 @@ group = "rafware"
 url = "github:Rexcrazy804/hjem-impure"
 group = "rafware"
 
-[inputs.circus]
-url = "github:manic-systems/circus"
-group = "rafware"
-exclude_follow = ["nixpkgs"]
-
 [inputs.ncro]
 url = "github:manic-systems/ncro"
 group = "rafware"
 
-[inputs.beer]
-url = "git+https://git.mayonster.com/mirror/beer.git"
-group = "rafware"
-
 
 # System stuff
-[inputs.chaotic]
-url = "github:chaotic-cx/nyx/nyxpkgs-unstable"
-group = "system"
-
 [inputs.nix-secrets]
 url = "github:unnamed-systems/nix-secrets"
 group = "system"
 
-[inputs.hyprland]
-url = "github:hyprwm/Hyprland"
-group = "system"
 
-[inputs.disko]
-url = "github:nix-community/disko"
-group = "system"
-
-
-# Programs
-[inputs.zen-browser]
-url = "github:0xc000022070/zen-browser-flake"
-group = "programs"
-
-[inputs.navibeat]
-url = "github:dmnc98/navibeat-flake"
-group = "programs"
-
-[inputs.sable]
-url = "forge:git.sable.moe/SableClient/sable-next"
-group = "programs"
 

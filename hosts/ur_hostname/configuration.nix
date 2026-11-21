@@ -37,10 +37,6 @@
       # Editor
       vim.enable = true;
 
-      #Fonts
-      #Needed for proper nvim
-      fonts.enable = true;
-
       termExtras.enable = true;
 
       # File Management
