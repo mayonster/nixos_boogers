@@ -1,0 +1,247 @@
+# 2077 theme for yazi
+
+# Style: { fg = '', bg = '', bold = true, dim = false, italic = true, underline = true, blink = true, blink_rapid = true, reversed = false, hidden = false, crossed = false }
+
+
+# : Manager {{{
+
+[app]
+overall = { bg = "#020d22" }
+
+
+[mgr]
+cwd = { fg = "#ff2e97" }
+
+# Find
+find_keyword  = { fg = "#ffd400", bold = true, italic = true, underline = true }
+find_position = { fg = "#ff2e97", bg = "reset", bold = true, italic = true }
+
+# Marker
+marker_copied   = { fg = "#ff2e97", bg = "#ff2e97" }
+marker_cut      = { fg = "#9e0a52", bg = "#9e0a52" }
+marker_marked   = { fg = "#6e15ff", bg = "#6e15ff" }
+marker_selected = { fg = "#c832ff", bg = "#c832ff" }
+
+# Count
+count_copied   = { fg = "#020d22", bg = "#ff2e97" }
+count_cut      = { fg = "#020d22", bg = "#9e0a52" }
+count_selected = { fg = "#020d22", bg = "#c832ff" }
+
+# Border
+border_symbol = "│"
+border_style  = { fg = "#0098df" }
+
+# WARNING: Remove before publishing flavor
+syntect_theme = "~/.config/yazi/2077.tmTheme"
+
+# : }}}
+
+
+# : Tabs {{{
+
+[indicator]
+parent = { fg = "#ff2e97", bg = "#17003d"}
+current = { fg = "#ff2e97", bg = "#17003d", bold = true}
+preview  = { fg = "#ff2e97", bg = "#17003d"}
+padding = { open = "▐", close = "▌" }
+
+[tabs]
+active   = { fg = "#020d22", bg = "#0098df", bold = true }
+inactive = { fg = "#0098df", bg = "#17003d" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "▌" }
+
+# : }}}
+
+
+# : Mode {{{
+
+[mode]
+
+normal_main = { fg = "#020d22", bg = "#6e15ff", bold = true }
+normal_alt  = { fg = "#6e15ff", bg = "#17003d" }
+
+# Select mode
+select_main = { fg = "#020d22", bg = "#fb32ff", bold = true }
+select_alt  = { fg = "#fb32ff", bg = "#17003d" }
+
+# Unset mode
+unset_main = { fg = "#020d22", bg = "#0ef3ff", bold = true }
+unset_alt  = { fg = "#0ef3ff", bg = "#17003d" }
+
+# : }}}
+
+
+# : Status bar {{{
+
+[status]
+# Permissions
+perm_sep   = { fg = "#0098df" }
+perm_type  = { fg = "#ffd400" }
+perm_read  = { fg = "#fb32ff" }
+perm_write = { fg = "#6e15ff" }
+perm_exec  = { fg = "#13db77" }
+sep_left = { open = "▐", close = "" }
+sep_right = { open = "", close = "▌" }
+
+# Progress
+progress_label  = { fg = "#ff2897", bold = true }
+progress_normal = { fg = "#0098df", bg = "#17003d" }
+progress_error  = { fg = "#9e0a52", bg = "#17003d" }
+
+# : }}}
+
+
+# : Pick {{{  'open interactively with O'
+
+[pick]
+border   = { fg = "#0098df" }
+active   = { fg = "#ff2e97", bold = true }
+inactive = {}
+
+# : }}}
+
+
+# : Input {{{
+
+[input]
+border   = { fg = "#0098df" }
+title    = {}
+value    = {}
+selected = { reversed = true }
+
+# : }}}
+
+
+# : Completion {{{
+
+[cmp]
+border = { fg = "#0098df" }
+
+# : }}}
+
+
+# : Tasks {{{
+
+[tasks]
+border  = { fg = "#0098df" }
+title   = {}
+hovered = { fg = "#ff2e97", bold = true }
+
+# : }}}
+
+
+# : Which {{{
+
+[which]
+mask            = { bg = "#17003d" }
+cand            = { fg = "#ffd400" }
+rest            = { fg = "#c832ff" }
+desc            = { fg = "#ff2e97" }
+separator       = "  "
+separator_style = { fg = "#0098df" }
+
+# : }}}
+
+
+# : Help {{{
+
+[help]
+on      = { fg = "#ff2e97" }
+run     = { fg = "#6e15ff" }
+hovered = { fg = "#ff2e97", bg = "#17003d" , bold = true, underline = true }
+footer  = { fg = "#6e15ff", bg = "#17003d" }
+
+# : }}}
+
+
+# : Spotter {{{
+
+[spot]
+border   = { fg = "#ff2e97" }
+title    = { fg = "#ff2e97" }
+tbl_col  = { fg = "#fb32ff" }
+tbl_cell = { fg = "#fb32ff", bg = "#17003d" }
+
+# : }}}
+
+
+# : Notification {{{
+
+[notify]
+title_info  = { fg = "#13db77" }
+title_warn  = { fg = "#cf4c00" }
+title_error = { fg = "#9e0a52" }
+
+# : }}}
+
+
+# : File-specific styles {{{
+
+[filetype]
+
+rules = [
+	# Image
+	{ mime = "image/*", fg = "#fb32ff" },
+	# Media
+	{ mime = "{audio,video}/*", fg = "#fb32ff" },
+	# Archive
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#ffd400" },
+	# Document
+	{ mime = "application/{pdf,doc,rtf}", fg = "#9e0a52" },
+	# Virtual file system
+	{ mime = "vfs/{absent,stale}", fg = "#8998c9" },
+	#Special
+	{ url = "*", is = "orphan", fg = "#e40000" },
+	{ url = "*", is = "exec", fg = "#13db77" },
+	{ url = "*", is = "link", fg = "#ffd400" },
+	# Fallback
+	{ url = "*", fg = "#0098df" },
+	{ url = "*/", fg = "#0098df" },
+]
+
+# : }}}
+
+[icon]
+
+dirs = [
+	{ name = ".config", text = "", fg = "#ff2e97" },
+	{ name = ".git", text = "", fg = "#ff2e97" },
+	{ name = ".github", text = "", fg = "#ff2e97" },
+	{ name = ".npm", text = "", fg = "#ff2e97" },
+	{ name = "Desktop", text = "", fg = "#ff2e97" },
+	{ name = "Development", text = "", fg = "#0ef3ff" },
+	{ name = "Documents", text = "", fg = "#ff2e97" },
+	{ name = "Downloads", text = "", fg = "#ffd400" },
+	{ name = "Library", text = "", fg = "#ff2e97" },
+	{ name = "Movies", text = "", fg = "#ff2e97" },
+	{ name = "Music", text = "", fg = "#ff2e97" },
+	{ name = "Pictures", text = "", fg = "#fb32ff" },
+	{ name = "Public", text = "", fg = "#ff2e97" },
+	{ name = "Videos", text = "", fg = "#fb32ff" },
+]
+files = [
+	{ name = "hyprland.lua", text = "", fg = "#0ef3ff" },
+	{ name = "hyprpaper.conf", text = "", fg = "#0ef3ff" },
+	{ name = ".env", text = "", fg = "#ffd400" },
+	{ name = "compose.yml", text = "󰡨", fg = "#ff5314" },
+	{ name = "Dockerfile", text = "󰡨", fg = "#ff5314" },
+	{ name = ".gitignore", text = "󰊢", fg = "#ff5314" },
+]
+conds = [
+	# Special files
+	{ if = "orphan", text = "", fg = "#e40000" },
+	{ if = "link", text = "", fg = "#ffd400" },
+	{ if = "block", text = "", fg = "#fb32ff" },
+	{ if = "char", text = "", fg = "#fb32ff" },
+	{ if = "fifo", text = "", fg = "#fb32ff" },
+	{ if = "sock", text = "", fg = "#fb32ff" },
+	{ if = "sticky", text = "", fg = "#fb32ff" },
+	{ if = "dummy", text = "", fg = "#e40000" },
+
+	# Fallback
+	{ if = "dir & hovered", text = "", fg = "#020d22" },
+	{ if = "dir", text = "", fg = "#0ef3ff" },
+	{ if = "exec", text = "", fg = "#13db77" },
+	{ if = "!dir", text = "", fg = "#0ef3ff" },
+]
